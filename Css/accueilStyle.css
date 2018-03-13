@@ -1,0 +1,42 @@
+body {
+    
+}
+
+/*Configuration de l'espace Header*/
+#header {
+    background-image: src="Images/Jumbo/Vietnam-jumbo.jpg";
+}
+
+#menuSup {
+    
+}
+
+#barreMenuSup {
+    
+}
+/*Mise en place d'un grid responsive pour le menu sup en hamburger
+
+
+
+
+
+
+/*Configuration Espace Container-bloc*/
+/*Mise en place d'un grid responsive*/
+#container-bloc {
+    
+}
+
+/*Configuration espace produit*/
+/*Mise en place d'un grid resposive*/
+#container-produit {
+    
+}
+
+/*Configuration du footer avec grid responsive*/
+footer {
+    
+}
+
+
+
