@@ -56,9 +56,108 @@ h1 {
 
 /*Configuration Espace Container-bloc*/
 /*Mise en place d'un grid responsive*/
-#container-bloc {
+/*Description pour ajustement à la taille de l'écran page accueil*/
+@media all {
+	#container-bloc {
+		margin-top: 50px;
+		display : grid;
+		grid-gap: 2px;
+		grid-template-columns: repeat(4, 300px);
+		grid-template-rows: repeat(2, 350px);
+		grid-auto-flow: row;
+		text-align: center;
+		align-content: center;
+		justify-content: space-around;
+	}
     
+    #container-produit {
+        margin-top: 50px;
+		display : grid;
+		grid-gap: 5px;
+		grid-template-columns: repeat(3, 300px);
+		grid-template-rows: repeat(1, 350px);
+		grid-auto-flow: row;
+		align-content: center;
+		align-items: center;
+		justify-content: space-around;
+        
+    }
 }
+
+
+/*Description pour les smartphones en paysage ou tablette en portrait page accueil*/
+@media all and (max-width: 900px) {
+	#container-bloc {
+		margin-top: 50px;
+		display : grid;
+		grid-gap: 5px;
+		grid-template-columns: repeat(2, 300px);
+		grid-template-rows: repeat(4, 350px);
+		grid-auto-flow: row;
+		align-content: center;
+		align-items: center;
+		justify-content: space-around;
+	}
+   
+    #container-produit {
+        margin-top: 50px;
+		display : grid;
+		grid-gap: 5px;
+		grid-template-columns: repeat(1, 500px);
+		grid-template-rows: repeat(3, 350px);
+		grid-auto-flow: row;
+		align-content: center;
+		align-items: center;
+		justify-content: space-around;       
+    }
+}
+
+
+
+/*Description pour les smartphones en portrait page accueil*/
+@media all and (max-width: 460px) {
+	#container-bloc {
+		margin-top: 50px;
+		display : grid;
+		grid-gap : 5px;
+		grid-template-columns: 300px;
+		grid-template-rows: repeat(8, 350px);
+		grid-auto-flow: row;
+		align-content: right;
+		align-items: right;
+		justify-content: space-around;
+	}
+    
+     #container-produit {
+        margin-top: 50px;
+		display : grid;
+		grid-gap: 5px;
+		grid-template-columns: repeat(1, 300px);
+		grid-template-rows: repeat(3, 550px);
+		grid-auto-flow: row;
+		align-content: center;
+		align-items: center;
+		justify-content: space-around;       
+    }
+}
+
+.button {
+	width: 300px;
+	height: 340px;
+	text-align: center;
+	border: 2px solid black;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	font-family : cursive;
+	color: black;
+	border-radius: 5px;
+}
+
+.image-bloc {
+    border-radius: 6px;
+}
+
 
 /*Configuration espace produit*/
 /*Mise en place d'un grid resposive*/
@@ -70,6 +169,8 @@ h1 {
 footer {
     
 }
+
+
 
 
 
