@@ -12,7 +12,7 @@ function initMenuPays () {
                 menuList += '<div id="image" class="bloc button">';
                 menuList += '<h3>' + menu[i].name + '</h3>';
                 menuList += '<img class="image-bloc" src="' + menu[i].image + '">';
-                menuList += '<button onclick="sendTheAJAX' + [i] + '()" class="btn btn-default">Let s visit!</button>';
+                menuList += '<button onclick="sendTheAJAX' + [i] + '()" class="btn btn-sucess">Let s visit!</button>';
                 menuList += '</div>';
                 menuList += '</div>';
 
