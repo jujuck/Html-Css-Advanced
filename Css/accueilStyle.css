@@ -1,17 +1,50 @@
 body {
-    
+    background-color: lightgray;
+    font-weight: 20px;
+    font-family: cursive;
 }
 
+h1 {
+    font-family: fantasy;
+    font-weight: 35px;
+    text-align: center;
+}
 /*Configuration de l'espace Header*/
-#header {
-    background-image: src="Images/Jumbo/Vietnam-jumbo.jpg";
+.header-container {
+    height: 700px;
+    background-repeat: no-repeat;
+    background-image: url("../Images/Jumbo/Vietnam-jumbo.jpg");
+    padding: 20px;
 }
 
-#menuSup {
+.logo {
+    position : fixed;
+    top: 20px;
+    width: 150px;
+    height: 150px;
+    padding: 15px;
+}
+
+.menuSup {
+    position: fixed;
+    top: 85px;
+    right: 25px;
     
 }
 
-#barreMenuSup {
+.row-menu {
+    
+}
+
+.col-menu {
+    display : inline;
+    padding: 20px;
+    background-color: white;
+    height: 5px;
+    border-radius : 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid black;
     
 }
 /*Mise en place d'un grid responsive pour le menu sup en hamburger
