@@ -6,18 +6,19 @@ function initMenuPays () {
     myRequestMenu.onreadystatechange = function () {
         if(myRequestMenu.readyState === 4) {
             var menu = JSON.parse(myRequestMenu.responseText);
-            var menuList = '<div id="contenu" class="container">';
+            var menuList = '<div class="contenu-visit">';
 
             for (var i = 0; i < menu.length; i++) {
-                menuList += '<div id="image" class="bloc button">';
+                menuList += '<div class="bloc pays">';
                 menuList += '<h3>' + menu[i].name + '</h3>';
-                menuList += '<img class="image-bloc" src="' + menu[i].image + '">';
-                menuList += '<button onclick="sendTheAJAX' + [i] + '()" class="btn btn-danger">Let s visit!</button>';
+                menuList += '<img class="image-pays" src="' + menu[i].image + '">';
+                menuList += '<button class="btn btn-danger visit">Let s visit!</button>';
                 menuList += '</div>';
-                menuList += '</div>';
+                
             }
         }
-        document.getElementById('container-bloc').innerHTML = menuList;
+        menuList += '</div>';
+        document.getElementById('contenu-pays').innerHTML = menuList;
     };
     myRequestMenu.send();
 }
@@ -33,18 +34,17 @@ function initMenuProduit () {
     myRequestProduit.onreadystatechange = function () {
         if(myRequestProduit.readyState === 4) {
             var menuProd = JSON.parse(myRequestProduit.responseText);
-            var produitList = '<div class="container-produit">';
+            var produitList = '<div class="contenu-prod">';
 
             for (var i = 0; i < menuProd.length; i++) {
-                produitList += '<div id="produit" class="bloc produit">';
+                produitList += '<div class="bloc produit">';
                 produitList += '<h3>' + menuProd[i].name + '</h3>';
-                produitList += '<p>' + menuProd[i].text + '</p>';
+                produitList += '<p class="prod">' + menuProd[i].text + '</p>';
                 produitList += '</div>';
-                produitList += '</div>';
-
             }
         }
-        document.getElementById('container-produit').innerHTML = produitList;
+        produitList += '</div>';
+        document.getElementById('contenu-produit').innerHTML = produitList;
     };
     myRequestProduit.send();
 }

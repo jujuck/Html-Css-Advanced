@@ -1,12 +1,9 @@
 /*Mise en place de menu hamburger*/
-/*Espace autour du titre*/
-/*Réglage des menu discovery*/
-/*Mise en place du footer avec icon de couleur pour les réseaux*/
 /*Fond blanc pour le défillement du menu supérieur*/
-/*Fermeture de la page : animation de sorite des blocs*/
-/*Bootstrap pour les boutons, fonts*/
+/*Fermeture de la page : animation de sortie des blocs*/
 /*Animatin jquery*/
 /*Menu affichage standard ou liste*/
+
 * { 
     margin:0;
     padding:0;
@@ -43,9 +40,14 @@ h3 {
 
 /*Configuration de l'espace Header*/
 .header-container {
-    height: 700px;
+    height : 700px;
     background-repeat: no-repeat;
     background-image: url("../Images/Jumbo/Vietnam-jumbo.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
     padding: 20px;
 }
 
@@ -68,7 +70,7 @@ h3 {
     
 }
 
-.col-menu {
+/*.menu {
     display : inline;
     padding: 20px;
     background-color: white;
@@ -76,9 +78,9 @@ h3 {
     border-radius : 15px;
     padding-top: 5px;
     padding-bottom: 5px;
-    border: 1px solid black;
-    
-}
+    border: 1px solid black; 
+}*/
+
 /*Mise en place d'un grid responsive pour le menu sup en hamburger
 
 
@@ -87,13 +89,18 @@ h3 {
 
 
 /*Configuration Espace Container-bloc*/
+#contenu-pays {
+    background-color: lightgray;
+}
+
+
 /*Mise en place d'un grid responsive*/
 /*Description pour ajustement à la taille de l'écran page accueil*/
 @media all {
-	#container-bloc {
-        background-color: lightgray;
+	.contenu-visit {
+        width :100%;
 		display : grid;
-		grid-gap: 5px;
+        grid-gap: 20px;
 		grid-template-columns: repeat(4, 300px);
 		grid-template-rows: repeat(2, 400px);
 		grid-auto-flow: row;
@@ -102,9 +109,9 @@ h3 {
 		justify-content: space-around;
 	}
     
-    #container-produit {
+    .contenu-prod {
 		display : grid;
-		grid-gap: 5px;
+		grid-gap: 20px;
 		grid-template-columns: repeat(3, 300px);
 		grid-template-rows: repeat(1, 400px);
 		grid-auto-flow: row;
@@ -118,10 +125,9 @@ h3 {
 
 /*Description pour les smartphones en paysage ou tablette en portrait page accueil*/
 @media all and (max-width: 900px) {
-	#container-bloc {
-        background-color: lightgray;
-		display : grid;
-		grid-gap: 5px;
+	.contenu-visit {
+        display: grid;
+        grid-gap: auto;
 		grid-template-columns: repeat(2, 300px);
 		grid-template-rows: repeat(4, 400px);
 		grid-auto-flow: row;
@@ -130,11 +136,11 @@ h3 {
 		justify-content: space-around;
 	}
    
-    #container-produit {
+    .contenu-prod {
 		display : grid;
 		grid-gap: 5px;
-		grid-template-columns: repeat(1, 350px);
-		grid-template-rows: repeat(3, 200px);
+		grid-template-columns: (1, 350px);
+		grid-template-rows: repeat(8, 200px);
 		grid-auto-flow: row;
 		align-content: center;
 		align-items: center;
@@ -146,11 +152,10 @@ h3 {
 
 /*Description pour les smartphones en portrait page accueil*/
 @media all and (max-width: 460px) {
-	#container-bloc {
-        background-color: lightgray;
+	.contenu-visit {
+        grid-gap: 5px;
 		display : grid;
-		grid-gap : 5px;
-		grid-template-columns: 300px;
+		grid-template-columns: repeat (1, 350px);
 		grid-template-rows: repeat(8, 400px);
 		grid-auto-flow: row;
 		align-content: right;
@@ -158,7 +163,7 @@ h3 {
 		justify-content: space-around;
 	}
     
-     #container-produit {
+     .contenu-prod {
 		display : grid;
 		grid-gap: 5px;
 		grid-template-columns: repeat(1, 350px);
@@ -170,7 +175,7 @@ h3 {
     }
 }
 
-.button {
+.pays {
 	width: 300px;
 	height: 375px;
 	text-align: center;
@@ -184,18 +189,16 @@ h3 {
     background-color: white;
 }
 
-.image-bloc {
+.image-pays {
     border-radius: 6px;
 }
 
-.btn {
+.visit {
     margin : 15px;
 }
+
 /*Configuration espace produit*/
-/*Mise en place d'un grid resposive*/
-#container-produit {
-    
-}
+
 
 /*Configuration du footer avec grid responsive*/
 footer {
@@ -216,7 +219,6 @@ footer {
 
 .fa {
     color:red;
-    height: 20px;
 }
 
 
