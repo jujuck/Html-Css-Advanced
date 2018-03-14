@@ -1,14 +1,46 @@
+/*Mise en place de menu hamburger*/
+/*Espace autour du titre*/
+/*Réglage des menu discovery*/
+/*Mise en place du footer avec icon de couleur pour les réseaux*/
+/*Fond blanc pour le défillement du menu supérieur*/
+/*Fermeture de la page : animation de sorite des blocs*/
+/*Bootstrap pour les boutons, fonts*/
+/*Animatin jquery*/
+/*Menu affichage standard ou liste*/
+* { 
+    margin:0;
+    padding:0;
+}
+
 body {
-    background-color: lightgray;
     font-weight: 20px;
-    font-family: cursive;
+    font-family: "Indie Flower", "cusrive";
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-size: 14px;
 }
 
 h1 {
-    font-family: fantasy;
+    font-family: "PT+Sans", "Arial";
     font-weight: 35px;
     text-align: center;
+    
 }
+
+.titre {
+    height: 130px;
+    text-align: center;
+    padding: 25px;
+    background-color: lightgray;
+}
+
+h3 {
+    font-family: "Merriweather Sans", "Sans Serif";
+    
+}
+
+
+
 /*Configuration de l'espace Header*/
 .header-container {
     height: 700px;
@@ -19,7 +51,7 @@ h1 {
 
 .logo {
     position : fixed;
-    top: 20px;
+    top: 10px;
     width: 150px;
     height: 150px;
     padding: 15px;
@@ -27,7 +59,7 @@ h1 {
 
 .menuSup {
     position: fixed;
-    top: 85px;
+    top: 75px;
     right: 25px;
     
 }
@@ -59,11 +91,11 @@ h1 {
 /*Description pour ajustement à la taille de l'écran page accueil*/
 @media all {
 	#container-bloc {
-		margin-top: 50px;
+        background-color: lightgray;
 		display : grid;
-		grid-gap: 2px;
+		grid-gap: 5px;
 		grid-template-columns: repeat(4, 300px);
-		grid-template-rows: repeat(2, 350px);
+		grid-template-rows: repeat(2, 400px);
 		grid-auto-flow: row;
 		text-align: center;
 		align-content: center;
@@ -71,11 +103,10 @@ h1 {
 	}
     
     #container-produit {
-        margin-top: 50px;
 		display : grid;
 		grid-gap: 5px;
 		grid-template-columns: repeat(3, 300px);
-		grid-template-rows: repeat(1, 350px);
+		grid-template-rows: repeat(1, 400px);
 		grid-auto-flow: row;
 		align-content: center;
 		align-items: center;
@@ -88,11 +119,11 @@ h1 {
 /*Description pour les smartphones en paysage ou tablette en portrait page accueil*/
 @media all and (max-width: 900px) {
 	#container-bloc {
-		margin-top: 50px;
+        background-color: lightgray;
 		display : grid;
 		grid-gap: 5px;
 		grid-template-columns: repeat(2, 300px);
-		grid-template-rows: repeat(4, 350px);
+		grid-template-rows: repeat(4, 400px);
 		grid-auto-flow: row;
 		align-content: center;
 		align-items: center;
@@ -100,11 +131,10 @@ h1 {
 	}
    
     #container-produit {
-        margin-top: 50px;
 		display : grid;
 		grid-gap: 5px;
-		grid-template-columns: repeat(1, 500px);
-		grid-template-rows: repeat(3, 350px);
+		grid-template-columns: repeat(1, 350px);
+		grid-template-rows: repeat(3, 200px);
 		grid-auto-flow: row;
 		align-content: center;
 		align-items: center;
@@ -117,11 +147,11 @@ h1 {
 /*Description pour les smartphones en portrait page accueil*/
 @media all and (max-width: 460px) {
 	#container-bloc {
-		margin-top: 50px;
+        background-color: lightgray;
 		display : grid;
 		grid-gap : 5px;
 		grid-template-columns: 300px;
-		grid-template-rows: repeat(8, 350px);
+		grid-template-rows: repeat(8, 400px);
 		grid-auto-flow: row;
 		align-content: right;
 		align-items: right;
@@ -129,11 +159,10 @@ h1 {
 	}
     
      #container-produit {
-        margin-top: 50px;
 		display : grid;
 		grid-gap: 5px;
-		grid-template-columns: repeat(1, 300px);
-		grid-template-rows: repeat(3, 550px);
+		grid-template-columns: repeat(1, 350px);
+		grid-template-rows: repeat(3, 200px);
 		grid-auto-flow: row;
 		align-content: center;
 		align-items: center;
@@ -143,22 +172,25 @@ h1 {
 
 .button {
 	width: 300px;
-	height: 340px;
+	height: 375px;
 	text-align: center;
-	border: 2px solid black;
+	border: 1px solid black;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 	font-family : cursive;
 	color: black;
-	border-radius: 5px;
+	border-radius: 6px;
+    background-color: white;
 }
 
 .image-bloc {
     border-radius: 6px;
 }
 
-
+.btn {
+    margin : 15px;
+}
 /*Configuration espace produit*/
 /*Mise en place d'un grid resposive*/
 #container-produit {
@@ -167,7 +199,24 @@ h1 {
 
 /*Configuration du footer avec grid responsive*/
 footer {
-    
+    height: 100px;
+}
+
+.reseau {
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.copyright {
+    float: right;
+    margin-right: 50px;
+    margin-top: 20px
+}
+
+.fa {
+    color:red;
+    height: 20px;
 }
 
 
