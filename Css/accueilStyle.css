@@ -93,14 +93,16 @@ h3 {
     background-color: lightgray;
 }
 
+#contenu-produit {
+    margin-top : 50px;
+}
+
 
 /*Mise en place d'un grid responsive*/
 /*Description pour ajustement à la taille de l'écran page accueil*/
 @media all {
 	.contenu-visit {
-        width :100%;
 		display : grid;
-        grid-gap: 20px;
 		grid-template-columns: repeat(4, 300px);
 		grid-template-rows: repeat(2, 400px);
 		grid-auto-flow: row;
@@ -111,23 +113,20 @@ h3 {
     
     .contenu-prod {
 		display : grid;
-		grid-gap: 20px;
 		grid-template-columns: repeat(3, 300px);
 		grid-template-rows: repeat(1, 400px);
 		grid-auto-flow: row;
 		align-content: center;
 		align-items: center;
-		justify-content: space-around;
-        
+		justify-content: space-around;  
     }
 }
 
 
 /*Description pour les smartphones en paysage ou tablette en portrait page accueil*/
-@media all and (max-width: 900px) {
+@media all and (max-width: 1220px) {
 	.contenu-visit {
         display: grid;
-        grid-gap: auto;
 		grid-template-columns: repeat(2, 300px);
 		grid-template-rows: repeat(4, 400px);
 		grid-auto-flow: row;
@@ -136,45 +135,32 @@ h3 {
 		justify-content: space-around;
 	}
    
-    .contenu-prod {
+     .contenu-prod {
 		display : grid;
-		grid-gap: 5px;
-		grid-template-columns: (1, 350px);
-		grid-template-rows: repeat(8, 200px);
+		grid-template-columns: auto;
+		grid-template-rows: repeat(3, 250px);
 		grid-auto-flow: row;
 		align-content: center;
 		align-items: center;
-		justify-content: space-around;       
+		justify-content: space-around;  
     }
 }
 
-
-
 /*Description pour les smartphones en portrait page accueil*/
-@media all and (max-width: 460px) {
+@media all and (max-width: 650px) {
 	.contenu-visit {
-        grid-gap: 5px;
 		display : grid;
-		grid-template-columns: repeat (1, 350px);
+		grid-template-columns: 300px;
 		grid-template-rows: repeat(8, 400px);
 		grid-auto-flow: row;
 		align-content: right;
 		align-items: right;
 		justify-content: space-around;
 	}
-    
-     .contenu-prod {
-		display : grid;
-		grid-gap: 5px;
-		grid-template-columns: repeat(1, 350px);
-		grid-template-rows: repeat(3, 200px);
-		grid-auto-flow: row;
-		align-content: center;
-		align-items: center;
-		justify-content: space-around;       
-    }
 }
 
+
+/*Mise en forme bloc Pays*/
 .pays {
 	width: 300px;
 	height: 375px;
@@ -183,8 +169,6 @@ h3 {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	font-family : cursive;
-	color: black;
 	border-radius: 6px;
     background-color: white;
 }
@@ -198,7 +182,10 @@ h3 {
 }
 
 /*Configuration espace produit*/
-
+.produit {
+    padding : 5px;
+    
+}
 
 /*Configuration du footer avec grid responsive*/
 footer {
