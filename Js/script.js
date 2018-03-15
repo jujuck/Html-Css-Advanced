@@ -36,17 +36,20 @@ function initMenuProduit () {
     myRequestProduit.onreadystatechange = function () {
         if(myRequestProduit.readyState === 4) {
             var menuProd = JSON.parse(myRequestProduit.responseText);
-            var produitList = '<div class="contenu-prod">';
+            var produitList = '<div class="row row-produit">';
 
             for (var i = 0; i < menuProd.length; i++) {
-                produitList += '<div class="bloc produit">';
+                produitList += '<div class="col-xs-12 col-sm-8 col-md-4 nos-produit-bloc">';
+                produitList += '<div class="nos-produits-item">';
                 produitList += '<h3>' + menuProd[i].name + '</h3>';
-                produitList += '<p class="prod">' + menuProd[i].text + '</p>';
+                produitList += '<p class="nos-produit-text">' + menuProd[i].text + '</p>';
+                produitList += '<button class="btn btn-pays">Let s Go!</button>';
+                produitList += '</div>';
                 produitList += '</div>';
             }
         }
         produitList += '</div>';
-        document.getElementById('contenu-produit').innerHTML = produitList;
+        document.getElementById('container-produit').innerHTML = produitList;
     };
     myRequestProduit.send();
 }

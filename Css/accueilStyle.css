@@ -254,7 +254,8 @@ p {
 .btn-pays:visited 
 {
     padding : 5px;
-    margin-top: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     color: #f3461A;
     font-size: 18px;
     font-weight: 350;
@@ -322,8 +323,8 @@ p {
 
 .testimonial-overlay {
     background-color: rgba(31, 31, 31, 0.5);
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .carousel_indicators {
@@ -367,12 +368,34 @@ p {
 
 
 
-/*Configuration espace produit*/
-.produit {
-    padding : 5px;
-    
+/*================= espace produit=====================*/
+.nos-produits-item {
+    padding: 10px; 
+    margin : 10px;
+	width: 100%;
+    display: block;
+	height: auto;
+	text-align: center;
+     transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
 }
 
+.nos-produits-item:hover {
+    border: 1px solid #111;
+    border-radius: 6px;
+    box-shadow: 2px 2px #111;
+}
+
+.nos-produits-item h3 {
+    text-align: center;
+}
+
+
+.btn-produit {
+    text-align: center;
+}
 /*Configuration du footer avec grid responsive*/
 footer {
     height: 100px;
