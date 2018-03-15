@@ -203,13 +203,13 @@ p {
 }
 
 .backpacking {
-    margin-top: 75px;
-    margin-left: 50px;    
+    margin-top: 75px;    
 }
 
 .backpacking img {
     border: 1px solid #111;
     border-radius: 6px;
+    width: 100%;
 }
 
 .backpacking img:hover {
@@ -224,13 +224,16 @@ p {
 }
 
 .nos-pays-bloc {
+   align-content: space-around;
    margin-bottom: 25px;
-    opacity: none;
+   width: 260px;
 }
 
 .nos-pays-item {
-	width: 252px;
-	height: 375px;
+    margin-left: 15px;
+	width: 100%;
+    display: block;
+	height: auto;
 	text-align: center;
 	border: 1px solid black;
 	background-size: cover;
@@ -241,7 +244,8 @@ p {
 }
 
 .image-pays {
-    border-radius: 6px;
+    border-radius: 6px;;
+    width: 100%;
 }
 
 .btn-pays,
@@ -294,7 +298,72 @@ p {
 
 */
 
+/*======== Commentaires ============*/
+.titre-commentaires h2 {
+    color: #D8D8D8;
+}
 
+.titre-commentaires p {
+    color: #D8D8D8;
+}
+
+
+.testimonial {
+    background-image: url("../Images/Jumbo/newZealand-Jumbo.jpg");
+    height: 700px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-position: 50% 50%;
+}
+
+.testimonial-overlay {
+    background-color: rgba(31, 31, 31, 0.5);
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.carousel_indicators {
+    bottom: -10px;
+}
+
+.carousel-inner .item img {
+    border: 2px solid #129CF3;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.testimonial-caption {
+    padding-bottom: 70px;
+}
+
+.testimonial-caption h2 {
+    color: #129CF3;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size 30px;
+    margin-top: 25px;
+}
+
+.testimonial-caption h4 {
+    color: #129CF3; 
+}
+
+.testimonial-caption h4 span {
+    color: #D8D8D8;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.testimonial-caption p {
+    color: #D8D8D8;
+    font-size: 18px;
+    line-height: 27px;
+    padding-top: 50px;
+}
 
 
 

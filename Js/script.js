@@ -6,10 +6,10 @@ function initMenuPays () {
     myRequestMenu.onreadystatechange = function () {
         if(myRequestMenu.readyState === 4) {
             var menu = JSON.parse(myRequestMenu.responseText);
-            var menuList = '<div class="row">';
+            var menuList = '<div class="row row-pays">';
 
             for (var i = 0; i < menu.length; i++) {
-                menuList += '<div class="col-md-3 nos-pays-bloc">';
+                menuList += '<div class="col-xs-12 col-sm-6 col-md-3 nos-pays-bloc">';
                 menuList += '<div class="nos-pays-item">'
                 menuList += '<h3>' + menu[i].name + '</h3>';
                 menuList += '<img class="image-pays" src="' + menu[i].image + '">';
