@@ -227,6 +227,75 @@
                     <!-- button class=" btn btn-produit"-->
             </div>
         </Section>
+        
+        <!-- Formulaire de contact -->
+        <section class="formulaire-contact">
+              <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="section-title">
+                            <h2>Contact Us</h2>
+                            <p>Nulla blandit sem sed neque pretium mattis. Etiam consectetur eleifend felis porttitor porttitor. Phasellus sit amet augue fringilla, fringilla lectus at, tincidunt ante.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-us-form">
+                <div class="container">
+                    <form role="form">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h3>Signup form</h3>
+                                <p>
+                                    <label for="username">Username</label> :
+                                    <input type="text" name="username" id="username" required>
+                                    <span id="usernameHelp"></span>
+                                </p>
+                                <p>
+                                    <label for="password">Password</label> :
+                                    <input type="password" name="password" id="password" required>
+                                    <span id="passwordHelp"></span>
+                                </p>
+                                <p>
+                                    <label for="emailAddress">Email address</label> :
+                                    <input type="email" name="emailAddress" id="emailAddress" required placeholder="user@gmail.com">
+                                    <span id="emailHelp"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" name="confirmation" id="confirmation">
+                                    <label for="confirmation">Send me a confirmation email</label>
+                                </p>
+                                <p>
+                                    <input type="radio" name="subscription" id="newsroom" value="newspromo">
+                                    <label for="newsroom">Subscribe me to newsletters and promotions</label>
+                                    <br>
+                                    <input type="radio" name="subscription" id="news" value="news">
+                                    <label for="news">Subscribe me only to the newsletter</label>
+                                    <br>
+                                    <input type="radio" name="subscription" id="no" value="no" checked>
+                                    <label for="no">No subscriptions please</label>
+                                    <br>
+                                </p>
+                                <p>
+                                    <label for="nationality">Nationality :</label>
+                                    <select name="nationality" id="nationality">
+                                        <option value="US" selected>American</option>
+                                        <option value="FR">French</option>
+                                        <option value="ES">Spanish</option>
+                                        <option value="XX">Other</option>
+                                    </select>
+                                </p>
+                            </div>
+                            <div class="col-md-8">
+                                <h3>Signup form</h3>
+                                <textarea class="form-control" id="message" rows="25" cols="10" placeholder="Message text...."></textarea>
+                                <button type="button" class="btn btn-pays  form_submit" onclick="verification-formulaire">SEND</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
         <hr>
         <footer>
             <div id="footer" class="footer">
