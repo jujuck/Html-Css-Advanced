@@ -11,38 +11,136 @@
         
         <!-- ajout de CSS-->
         <link rel="stylesheet" type ="text/css" href="Css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="css/accueilStyle.css">
         
         <!--Font awesome-->
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        
+        <!-- Fichier CSs interne -->
+         <link rel="stylesheet" type="text/css" href="css/accueilStyle.css">
 
     </head>
     <body>
         <header>
-            <div id="header" class="header-container">
-                <!--Esapce Logo-->
-                <div id="logo" class="logo col-md-4">
-                    <img src="Images/logo.png" class="logo">
-                </div>
-                <!--Espace Menu-->
-                <div id="menuSup" class="menuSup col-md-8">
-                    <ul id="barreMenuSup" class="row-menu">
-                        <li class="btn btn-default Pays col-md-2">Nos Pays</li>
-                        <li class="btn btn-default Produit col-md-2">Nos Produits</li>
-                        <li class="btn btn-default Contact col-md-2">Contact Us</li>
-                        <li class="btn btn-default About col-md-2">About Us</li>
-                    </ul>
+            <div id="header" class="header">
+                <div class="header-overlay">
+                    <div class="container">
+                        <div class="row">
+                            <div class="header-presentation">
+                                <div class="col-md-4">
+                                    <!--Espace Logo-->
+                                    <div id="logo" class="logo">
+                                        <img src="Images/logo.png" class="logo">
+                                    </div>
+                                </div>
+                                <div class="col_md-8">
+                                    <!--Titre et description-->
+                                    <div class="header-text">
+                                        <h1>A website to visit the world</h1>
+                                        <p>as it seems to be</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Header button-->
+                        <div class="row">
+                            <div class="clo-md-12">
+                                <div class="header-btn">
+                                    <a class="btn btn-tour" href="#">Have a look</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
-        <div id="titre" class="titre">
-            <h1>Discovery the world with us</h1>
-        </div>
-        <!--Espace de sous menu par catégorie-->
-        <Sections>
-            <div id="contenu-pays" class="contenu-pays">
+        
+        <!-- Our Spirit -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <!--About Us Title & Description -->
+                        <div class="titre-description">
+                            <h2>Our Spirit of travelling</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rhoncus ultricies nibh, vitae sodales purus. Aenean volutpat ullamcorper cursus. Duis tristique sit amet augue ac vestibulum.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </Sections>
+            <div class="nous-choisir-part">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- Why choose Us -->
+                            <div class="nous-choisir-text">
+                                <div class="nous-choisir-titre">
+                                    <h2> Pourquoi nous?</h2>
+                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque lacus dui, interdum sit amet varius.</p>
+                                </div>
+                                <!-- Why choose Us description -->
+                                <div class="nous-choisir-descr">
+                                    <!-- choose us item 1 -->
+                                    <div class="nous-choisir-item">
+                                        <! -- choose us item icon -->
+                                        <div><i class="fa fa-bolt"></i></div>
+                                        <!-- choose us item title & desc -->
+                                        <h3>La liberté</h3>
+                                        <p>Lipsum Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque lacus dui, interdum sit amet varius a, cursus sit amet sapien. Donec eu placerat nisi.</p>
+                                    </div>
+                                    <!-- choose us item 2 -->
+                                    <div class="nous-choisir-item">
+                                        <! -- choose us item icon -->
+                                        <div><i class="fa fa-bullhorn"></i></div>
+                                        <!-- choose us item title & desc -->
+                                        <h3>La découverte</h3>
+                                        <p>Diso Lipsum Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque lacus dui, interdum sit amet varius a, cursus sit amet sapien. Donec eu placerat nisi.</p>
+                                    </div>
+                                    <!-- choose us item 3 -->
+                                    <div class="nous-choisir-item">
+                                        <!-- choose us item icon -->
+                                        <div><i class="fa fa-flag-o"></i></div>
+                                        <!-- choose us item title & desc -->
+                                        <h3>La simplicité</h3>
+                                        <p>Sed ut perspiciatis Cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.unde omnis iste natus error sit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- BAckpacker toujours -->
+                            <div class="backpacking">
+                                <img src="Images/Hiking-spirit.jpg" alt="Randonneur">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- Nos Pays -->
+        <section class="nos-pays">
+            <!--Espace Titre et description-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                       <div id="titre-nos-pays" class="titre-description">
+                            <h2>Discovery the world with us</h2>
+                            <p>Ut enim benefici liberalesque sumus, non ut exigamus gratiam (neque enim beneficium faeneramur sed natura propensi ad liberalitatem sumus).</p>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <!--Espace de sous menu par catégorie-->
+            <div class="container" id="container-pays">
+                <!-- div class="row"-->
+                    <!-- div class="col-md-3 nos-pays-bloc"-->
+                    <!-- div class="nos-pays-item -->
+                    <!-- h3 -->
+                    <!-- img class="image-pays"-->
+                    <!-- button class=" btn btn-danger btn-pays"-->
+            </div>
+        </section>
         
         <!--Espace de menu produit-->
         <Section>
@@ -66,7 +164,7 @@
                 </div>
             </div>
         </footer>
-        
+        -->
         <script src="Js/jquery.js"></script>
         <script src="Js/bootstrap.min.js"></script>
         <script src="Js/script.js"></script>

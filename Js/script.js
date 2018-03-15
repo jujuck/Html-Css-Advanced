@@ -6,19 +6,21 @@ function initMenuPays () {
     myRequestMenu.onreadystatechange = function () {
         if(myRequestMenu.readyState === 4) {
             var menu = JSON.parse(myRequestMenu.responseText);
-            var menuList = '<div class="contenu-visit">';
+            var menuList = '<div class="row">';
 
             for (var i = 0; i < menu.length; i++) {
-                menuList += '<div class="bloc pays">';
+                menuList += '<div class="col-md-3 nos-pays-bloc">';
+                menuList += '<div class="nos-pays-item">'
                 menuList += '<h3>' + menu[i].name + '</h3>';
                 menuList += '<img class="image-pays" src="' + menu[i].image + '">';
-                menuList += '<button class="btn btn-danger visit">Let s visit!</button>';
+                menuList += '<button class="btn btn-pays">Let s visit!</button>';
+                menuList += '</div>';
                 menuList += '</div>';
                 
             }
         }
         menuList += '</div>';
-        document.getElementById('contenu-pays').innerHTML = menuList;
+        document.getElementById('container-pays').innerHTML = menuList;
     };
     myRequestMenu.send();
 }

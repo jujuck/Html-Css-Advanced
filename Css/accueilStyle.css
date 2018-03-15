@@ -11,95 +11,265 @@
 
 body {
     font-weight: 20px;
-    font-family: "Indie Flower", "cusrive";
     overflow-y: scroll;
     overflow-x: hidden;
     font-size: 14px;
 }
 
-h1 {
+p {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Indie Flower", "cusrive";
+}
+
+/*========Caractéristique générale ==================*/
+
+.titre-description {
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.titre-description h2 {
+    position: relative;
+    text-align: center;
+    color: #222;
     font-family: "PT+Sans", "Arial";
-    font-weight: 35px;
+    font-weight: 400;
+    text-transform: uppercase;   
+}
+
+.titre-description h2:after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    width: 60px;
+    height: 1px;
+    background-color: #f3461a;
+    margin-left: -30px;  
+}
+
+.titre-description p {
+    color: #222;
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: 500;
     text-align: center;
-    
+    margin-top: 45px;
 }
 
-.titre {
-    height: 130px;
-    text-align: center;
-    padding: 25px;
-    background-color: lightgray;
-}
-
-h3 {
-    font-family: "Merriweather Sans", "Sans Serif";
-    
-}
-
-
-
-/*Configuration de l'espace Header*/
-.header-container {
-    height : 700px;
+/*============Espace Header================*/
+.header {
+    height: 700px;
     background-repeat: no-repeat;
-    background-image: url("../Images/Jumbo/Vietnam-jumbo.jpg");
+    background-image: url("../Images/Jumbo/Australie-jumbo.JPG");
     background-position: 50% 50%;
     background-size: cover;
+    background-attachment: fixed;
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
-    padding: 20px;
+}
+
+.header-presentation {
+    margin-top : 85px;
 }
 
 .logo {
-    position : fixed;
-    top: 10px;
-    width: 150px;
-    height: 150px;
-    padding: 15px;
+    width: 200px;
+    height: 200px;
 }
 
-.menuSup {
-    position: fixed;
-    top: 75px;
-    right: 25px;
-    
+.header-text h1 {
+    font-family: "Merriweather+Sans", sans-serif; 
+    text-align: center;
+    color: #111;
+    font-size: 45px;
+    font-weight: 450;
+    line-height: 50px;
+    text-transform: uppercase;
+    padding-top: 45px;
 }
 
-.row-menu {
-    
+.header-text p {
+    text-align: center;
+    color: #111;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 600;
 }
 
-/*.menu {
-    display : inline;
-    padding: 20px;
-    background-color: white;
-    height: 5px;
-    border-radius : 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border: 1px solid black; 
-}*/
+.header-btn {
+    margin-top: 300px;
+    text-align: center;
+}
 
-/*Mise en place d'un grid responsive pour le menu sup en hamburger
+.btn-tour,
+.btn-tour:focus,
+.btn-tour:active,
+.btn-tour:visited
+{
+    text-align: center;
+    background-color: #00F3B8;
+    opacity: 0.5;
+    border-color: #00F3B8;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;  
+}
 
 
 
+.btn-tour:hover {
+    background-color: #00F3B8;
+    color: #111;
+}
+
+/*==================Nous Choisir ================*/
+.nous-choisir-part {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.nous-choisir-text {
+    text-align: right;
+}
+
+.nous-choisir-titre {
+    padding-bottom: 20px;
+}
+
+.nous-choisir-titre h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    position: relative;
+}
+
+.nous-choisir-titre h2:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    width: 60px;
+    height: 1px;
+    background-color: #F3461A;
+}
+
+.nous-choisir-titre p {
+    padding-top: 25px;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 300;
+}
+
+.nous-choisir-item {
+    position: relative;
+    padding-bottom: 4px;
+    padding-right: 60px;
+}
+.nous-choisir-item div {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.nous-choisir-item div i {
+    font-size: 30px;
+    color: #f3461A;
+    transition: all 1s;
+    -moz-ransition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+}
+
+.cnous-choisir-item h3 {
+    color: #111;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.nous-choisir-item p {
+    color: #111;
+    font-size: 15px;
+}
+
+.backpacking {
+    margin-top: 75px;
+    margin-left: 50px;    
+}
+
+.backpacking img {
+    border: 1px solid #111;
+    border-radius: 6px;
+}
+
+.backpacking img:hover {
+    box-shadow: 5px 5px #111;
+}
 
 
-
-/*Configuration Espace Container-bloc*/
-#contenu-pays {
+/*==============Nos Pays ========================*/
+.nos-pays {
     background-color: lightgray;
+    padding-bottom: 25px;
 }
 
-#contenu-produit {
-    margin-top : 50px;
+.nos-pays-bloc {
+   margin-bottom: 25px;
+    opacity: none;
+}
+
+.nos-pays-item {
+	width: 252px;
+	height: 375px;
+	text-align: center;
+	border: 1px solid black;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 6px;
+    background-color: white;
+}
+
+.image-pays {
+    border-radius: 6px;
+}
+
+.btn-pays,
+.btn-pays:focus, 
+.btn-pays:active, 
+.btn-pays:visited 
+{
+    padding : 5px;
+    margin-top: 15px;
+    color: #f3461A;
+    font-size: 18px;
+    font-weight: 350;
+    border: 1px solid #f3461A;
+    background-color: transparent;
+     transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+}
+
+.btn-pays:hover {
+    color: #fff;
+    background-color: #f3461A;
 }
 
 
 /*Mise en place d'un grid responsive*/
-/*Description pour ajustement à la taille de l'écran page accueil*/
+/*Description pour ajustement à la taille de l'écran page accueil
 @media all {
 	.contenu-visit {
 		display : grid;
@@ -122,64 +292,11 @@ h3 {
     }
 }
 
-
-/*Description pour les smartphones en paysage ou tablette en portrait page accueil*/
-@media all and (max-width: 1220px) {
-	.contenu-visit {
-        display: grid;
-		grid-template-columns: repeat(2, 300px);
-		grid-template-rows: repeat(4, 400px);
-		grid-auto-flow: row;
-		align-content: center;
-		align-items: center;
-		justify-content: space-around;
-	}
-   
-     .contenu-prod {
-		display : grid;
-		grid-template-columns: auto;
-		grid-template-rows: repeat(3, 250px);
-		grid-auto-flow: row;
-		align-content: center;
-		align-items: center;
-		justify-content: space-around;  
-    }
-}
-
-/*Description pour les smartphones en portrait page accueil*/
-@media all and (max-width: 650px) {
-	.contenu-visit {
-		display : grid;
-		grid-template-columns: 300px;
-		grid-template-rows: repeat(8, 400px);
-		grid-auto-flow: row;
-		align-content: right;
-		align-items: right;
-		justify-content: space-around;
-	}
-}
+*/
 
 
-/*Mise en forme bloc Pays*/
-.pays {
-	width: 300px;
-	height: 375px;
-	text-align: center;
-	border: 1px solid black;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	border-radius: 6px;
-    background-color: white;
-}
 
-.image-pays {
-    border-radius: 6px;
-}
 
-.visit {
-    margin : 15px;
-}
 
 /*Configuration espace produit*/
 .produit {
