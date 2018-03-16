@@ -396,28 +396,166 @@ p {
 .btn-produit {
     text-align: center;
 }
-/*Configuration du footer avec grid responsive*/
-footer {
-    height: 100px;
+
+/*======================= Compteur ================*/
+.counter {
+    background-image: url("../Images/Jumbo/Tanzanie-Jumbo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-position: 50% 50%;
 }
 
-.reseau {
-    float: left;
-    margin-top: 20px;
-    margin-left: 20px;
+.counter-overlay {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background: rgba(0, 0, 0, 0.4);
 }
 
-.copyright {
-    float: right;
-    margin-right: 50px;
-    margin-top: 20px
+.counter-item i {
+    color: #F3461A;
+    font-size: 60px;
 }
 
-.fa {
-    color:red;
+.counter-item h2 {
+    font-family: "Merriweather Sans", sans-serif;
+    color: #00F3B8;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 35px;
+    margin-top: 15px;
+    margin-bottom: 1px;
+}
+
+.counter-item p {
+    color: #00F3B8;
+    font-size: 20px;
+    margin-top: 0px;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+/*=============== Formulaire de contact ==============*/
+.contact-us-form .form-control{
+    display: blocked;
+    height: 50px;
+    width: 100%;
+    padding:  6px 12px;
+    font-size: 14px;
+    line-height: 21px;
+    color: #555;
+    background-color: transparent;
+    border: 1px solid #AEAEAE;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    opacity: 0.8;
+    outline: 0px !important;
+    transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+}
+
+#message {
+    height: 120px;
+    resize: none;
+}
+
+.social-icons {
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+.social-icons ul {
+    margin:0;
+    padding: 0;
+    text-align: center;
+}
+
+.social-icons ul li {
+    list-style: none;
+    display: inline;
+    padding-left: 10px;
+}
+
+.social-icons ul li a {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #F3461A;
+    border-radius: 3px;
+    width: 45px;
+    height: 45px;
+    line-height: 49px;
+    color: #F3461A;
+}
+
+.social-icons ul li a:hover {
+    color: #fff;
+    background-color: lightgray;
+    transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+}
+
+.social-icons ul li a i {
+    font-size: 20px;
+    color: #F3461A;
 }
 
 
+
+/*=============Footer================*/
+.footer {
+    background-image: url("../Images/Jumbo/montBlanc-Jumbo-footer.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-position: 50% 50%;
+    padding-bottom: 35px;
+    padding-top: 35px;
+    border-bottom: 3px solid #129CF3;
+}
+
+.row-footer {
+    padding: 50px;
+}
+#copyright {
+    width: 50%;
+}
+
+#copyright p {
+    color: #111;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+#copyright p a {
+    text-decoration: none;
+    color: #F3461A;
+}
+
+.scroll-top {
+    text-align: right;
+}
+
+.scroll-top a {
+background-color: #F3461A;
+    padding: 25px;
+}
+
+.scroll-top a i {
+    color: #fff;
+    font-size: 25px;
+}
 
 
 
