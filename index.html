@@ -3,6 +3,8 @@
     <head>
         <title>Discovery the world with us</title>
         <meta charset="utf-8">
+         <meta name="description" content="Simple, clean, responsive website built with Html 5, Css3, Js, Jquery and Bootstrap">
+        <meta name="keywords" content="web, desing, html, css3, javascript, jquery, bootstrap, developpement">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- AJout de font-family-->
@@ -16,10 +18,44 @@
         
         <!-- Fichier CSs interne -->
          <link rel="stylesheet" type="text/css" href="css/accueilStyle.css">
+        
+        <!-- Fichier d'animation -->
+        <link rel="stylesheet" type="text/css" href="css/animate.css"> 
 
     </head>
     <body>
-        <header>
+        <header id="Home">
+            <!-- Navigation barre -->
+            <nav class="navbar navbar-default navbar-fixed-top">
+              <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#loso-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">
+                    <!-- Small size Logo -->
+                      <img src="Images/small-logo.png" alt="small-logo">
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="loso-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#Home" class="nav-item">HOME</a></li>
+                      <li><a href="#Spirit" class="nav-item">OUR SPIRIT</a></li>
+                      <li><a href="#Discovery" class="nav-item">DISCOVERY</a></li>
+                      <li><a href="#Testimonials" class="nav-item">TESTIMONIALS</a></li>
+                      <li><a href="#Proposals" class="nav-item">PROPOSALS</a></li>
+                      <li><a href="#Contact" class="nav-item">CONTACT</a></li>    
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container -->
+            </nav>
+            <!-- Section de présentation Header -->
             <div id="header" class="header">
                 <div class="header-overlay">
                     <div class="container">
@@ -54,7 +90,7 @@
         </header>
         
         <!-- Our Spirit -->
-        <section>
+        <section id="Spirit">
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
@@ -69,7 +105,7 @@
             <div class="nous-choisir-part">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 wow fadeInLeft" data-wow-duration:"1s">
                             <!-- Why choose Us -->
                             <div class="nous-choisir-text">
                                 <div class="nous-choisir-titre">
@@ -107,7 +143,7 @@
                         </div>
                         <div class="col-md-6">
                             <!-- BAckpacker toujours -->
-                            <div class="backpacking">
+                            <div class="backpacking wow rotateIn" data-wow-duration:"1s">
                                 <img src="Images/Hiking-spirit.jpg" alt="Randonneur">
                             </div>
                         </div>
@@ -118,7 +154,7 @@
         
         
         <!-- Nos Pays -->
-        <section class="nos-pays">
+        <section class="nos-pays" id="Discovery">
             <!--Espace Titre et description-->
             <div class="container">
                 <div class="row">
@@ -127,6 +163,16 @@
                             <h2>Discovery the world with us</h2>
                             <p>Ut enim benefici liberalesque sumus, non ut exigamus gratiam (neque enim beneficium faeneramur sed natura propensi ad liberalitatem sumus).</p>
                         </div> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="menu-presentation">
+                            <ul>
+                                <li><a href="#" onclick="initPaysListe()"><i class="fa fa-list"></i></a></li>
+                                <li><a href="#" onclick="initPaysCarte()"><i class="fa fa-th"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -142,7 +188,7 @@
         </section>
         
         <!-- Commentaires -->
-        <section class="testimonial">
+        <section class="testimonial" id="Testimonials">
             <div class="testimonial-overlay">
                    <!--Espace Titre et description-->
                 <div class="container">
@@ -205,7 +251,7 @@
         </section>
         
         <!--Espace de menu produit-->
-        <Section class="nos produits">
+        <Section class="nos produits" id="Proposals">
             <!--Espace Titre et description-->
             <div class="container">
                 <div class="row">
@@ -267,7 +313,7 @@
         </section>
         
         <!-- Formulaire de contact -->
-        <section class="formulaire-contact">
+        <section class="formulaire-contact" id="Contact">
               <div class="container">
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
@@ -341,7 +387,7 @@
             </div>
              <div class="container">
                 <div class="row">
-                    <div class="col-md-12 wow bounceInLeft">
+                    <div class="col-md-12 wow flip" data_wow-duration:"1s">
                         <div class="social-icons">
                             <ul>
                                 <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
@@ -373,8 +419,21 @@
             </div>
         </footer>
         
-        <!--<script src="Js/jquery.js"></script>-->
+        <!-- Bootstrap et jquery script pour animation -->
+        <script src="Js/jquery.js"></script>
         <script src="Js/bootstrap.min.js"></script>
+        
+        <!-- Counter Up javascript -->
+        <script src="Js/jquery.waypoints.min.js"></script>
+        <script src="Js/jquery.counterup.min.js"></script>
+        
+        <!-- Row javascript -->
+        <script src="Js/wow.min.js"></script>
+        
+        <!-- Script d'animation -->
+        <script src="Js/Animation.js"></script>
+        
+        <!-- Script de création de page -->
         <script src="Js/script.js"></script>
     </body>
 </html>

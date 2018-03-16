@@ -58,6 +58,57 @@ p {
     margin-top: 45px;
 }
 
+/*============== Nav Bar header ===========*/
+.navbar {
+    margin-top : -50px;
+}
+
+.navbar-default  {
+    background-color : transparent;
+    color: #111;
+    z-index: 110;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;     
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #111;
+    font-family: "PT Sans", sans-serif;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #F3461A;
+}
+
+.navbar-default .navbar-nav > li > a:focus {
+    color: #fff;
+}
+
+.navbar-brand {
+    padding: 9px 15px;
+}
+
+.navbar-brand img {
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+}
+
+.navbar-default .navbar-nav > .active>a,
+.navbar-default .navbar-nav > .active>a:focus,
+.navbar-default .navbar-nav > .active>a:focus{
+    background-color: transparent;
+    color: #F3461A;
+}
+
+
 /*============Espace Header================*/
 .header {
     height: 700px;
@@ -117,6 +168,7 @@ p {
     font-size: 20px;
     font-weight: 400;
     text-transform: uppercase;
+    border: 1px solid #111;
     border-radius: 3px;
     transition: all 1s;
     -webkit-transition: all 1s;
@@ -217,20 +269,61 @@ p {
 }
 
 
-/*==============Nos Pays ========================*/
+/*==============Nos Pays Généralités========================*/
 .nos-pays {
     background-color: lightgray;
     padding-bottom: 25px;
 }
 
-.nos-pays-bloc {
-   align-content: space-around;
-   margin-bottom: 25px;
-   width: 260px;
+.menu-presentation {
+    padding-top: 50px;
+    padding-bottom: 70px;
 }
 
-.nos-pays-item {
-    margin-left: 15px;
+.menu-presentation ul {
+    margin:0;
+    padding: 0;
+    text-align: center;
+}
+
+.menu-presentation ul li {
+    list-style: none;
+    display: inline;
+    padding-left: 10px;
+}
+
+.menu-presentation ul li a {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #F3461A;
+    border-radius: 3px;
+    width: 45px;
+    height: 45px;
+    line-height: 49px;
+    color: #F3461A;
+}
+
+.menu-presentation ul li a:hover {
+    color: #fff;
+    background-color: #F3461A;
+    transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+}
+
+.menu-presentation {
+    font-size: 20px;
+    color: #F3461A;
+}
+
+/*=============== Nos Pays mode carte =================*/
+.nos-pays-carte {
+    padding: 10px;
+}
+
+.nos-pays-carte-item {
 	width: 100%;
     display: block;
 	height: auto;
@@ -243,7 +336,7 @@ p {
     background-color: white;
 }
 
-.image-pays {
+.image-pays-carte {
     border-radius: 6px;;
     width: 100%;
 }
@@ -271,33 +364,30 @@ p {
     color: #fff;
     background-color: #f3461A;
 }
-
-
-/*Mise en place d'un grid responsive*/
-/*Description pour ajustement à la taille de l'écran page accueil
-@media all {
-	.contenu-visit {
-		display : grid;
-		grid-template-columns: repeat(4, 300px);
-		grid-template-rows: repeat(2, 400px);
-		grid-auto-flow: row;
-		text-align: center;
-		align-content: center;
-		justify-content: space-around;
-	}
-    
-    .contenu-prod {
-		display : grid;
-		grid-template-columns: repeat(3, 300px);
-		grid-template-rows: repeat(1, 400px);
-		grid-auto-flow: row;
-		align-content: center;
-		align-items: center;
-		justify-content: space-around;  
-    }
+/*========== Nos Pays mode Liste===========*/
+.row-pays-detail {
+    height: auto;
+    display: block;
+    background-color : #fff;
+    border: 1px solid black;
+    border-radius: 6px;
+    text-align: center;
+    margin: 5px;
 }
 
-*/
+.nos-pays-detail-img {
+    margin-top: 15px; 
+    margin-bottom : 10px;
+}
+
+.image-pays-detail {
+    border-radius: 6px;
+    height: 70px;
+    
+}
+.nos-pays-detail-text {
+    text-align: left;
+}
 
 /*======== Commentaires ============*/
 .titre-commentaires h2 {
@@ -307,7 +397,6 @@ p {
 .titre-commentaires p {
     color: #D8D8D8;
 }
-
 
 .testimonial {
     background-image: url("../Images/Jumbo/newZealand-Jumbo.jpg");
