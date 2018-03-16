@@ -2,12 +2,14 @@ var A = 'Home';
 var B = 'Spirit';
 var C = 'Testimonials';
 var D = 'Compteur';
+var E = 'Discovery';
+var F = 'Proposals';
 var Home = A;
 var Spirit = B;
 var Testimonials = C;
 var Compteur = D;
-var Discovery = 'Discovery';
-var Produit = 'Proposals'
+var Discovery = E;
+var Produit = F;
 
 //==========Mise en place de la page Header===========*/
 function sendHeader(Home) {
@@ -46,7 +48,7 @@ function sendDiscovery(Discovery) {
     myRequestDiscovery.open('GET', 'html/Pays.html');
     myRequestDiscovery.onreadystatechange = function () {
         if (myRequestDiscovery.readyState === 4) {
-            document.getElementById('Discovery').innerHTML = myRequestDiscovery.responseText;
+            document.getElementById(Discovery).innerHTML = myRequestDiscovery.responseText;
         }
     };
     myRequestDiscovery.send();
@@ -77,7 +79,7 @@ function initPaysCarte () {
             }
         }
         menuList += '</div>';
-        document.querySelector("#Discovery div.nos-pays div.container-pays").innerHTML = menuList;
+        document.querySelector("section div.nos-pays div.container-pays").innerHTML = menuList;
     };
     myRequestMenu.send();
 }
@@ -109,7 +111,7 @@ function initPaysListe () {
             }
         }
         menuList += '</div>';
-        document.querySelector("#Discovery div.nos-pays div.container-pays").innerHTML = menuList;
+        document.querySelector("section div.nos-pays div.container-pays").innerHTML = menuList;
     };
     myRequestMenu.send();
 }
@@ -146,7 +148,7 @@ function sendProduit(Produit) {
 sendProduit(Produit);
 
 //===============Création du menu produit====================
-function initMenuProduit () {
+function initMenuProduit() {
     var myRequestProduit = new XMLHttpRequest();
     myRequestProduit.open('GET','Data/container-produit.json');
 
@@ -166,7 +168,7 @@ function initMenuProduit () {
             }
         }
         produitList += '</div>';
-        document.querySelector("#Proposals div.nos-produits div.container-produit").innerHTML = produitList;
+        document.querySelector("section div.nos-produits div.container-produit").innerHTML = produitList;
     };
     myRequestProduit.send();
 }
@@ -211,24 +213,48 @@ function initNewConfig(configNum) {
         Spirit = B;
         Testimonials = C;
         Compteur = D;
+        Discovery = E;
+        Produit = F;
         break;
     case "2":
         Home = B;
         Spirit = C;
         Testimonials = D;
         Compteur = A;
+        Discovery = F;
+        Produit = E;
         break;
     case "3":
         Home = C;
-        Spirit = D;
-        Testimonials = A;
+        Spirit = F;
+        Testimonials = E;
         Compteur = B;
+        Discovery = A;
+        Produit = D;
         break;
     case "4":
         Home = D;
         Spirit = A;
-        Testimonials = B;
+        Testimonials = F;
         Compteur = C;
+        Discovery = E;
+        Produit = B;
+        break;
+    case "5":
+        Home = B;
+        Spirit = F;
+        Testimonials = E;
+        Compteur = C;
+        Discovery = D;
+        Produit = A;
+        break;
+    case "6":
+        Home = C;
+        Spirit = A;
+        Testimonials = F;
+        Compteur = D;
+        Discovery = B;
+        Produit = E;
         break;
     default:
          alert("Ce numero ne convient à aucune configuration");
@@ -237,6 +263,10 @@ function initNewConfig(configNum) {
     sendOurSpirit(Spirit);
     sendCompteur(Compteur);
     sendCommentaires(Testimonials);
+    sendProduit(Produit);
+    sendDiscovery(Discovery);
+    initMenuProduit();
+    initPaysCarte();
 }
 
 
@@ -291,7 +321,7 @@ function verificationFormulaire() {
     var motDePasse = document.getElementById("password").value;
 
     if (utilisateur === "julien" && motDePasse === "motdepasse") {
-        var configNum = prompt('Bonjour, veuillez entrez un N° de configuration 1-4');
+        var configNum = prompt('Bonjour, veuillez entrez un N° de configuration 1-6');
         initNewConfig(configNum);  
     } else {
         alert("Tu peux toujours courir!");
