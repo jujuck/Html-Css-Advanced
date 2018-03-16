@@ -1,11 +1,13 @@
-var A = 'A';
-var B = 'B';
-var C = 'C';
-var D = 'D';
+var A = 'Home';
+var B = 'Spirit';
+var C = 'Testimonials';
+var D = 'Compteur';
 var Home = A;
 var Spirit = B;
 var Testimonials = C;
 var Compteur = D;
+var Discovery = 'Discovery';
+var Produit = 'Proposals'
 
 //==========Mise en place de la page Header===========*/
 function sendHeader(Home) {
@@ -37,6 +39,21 @@ function sendOurSpirit(Spirit) {
 
 sendOurSpirit(Spirit);
 
+//==========Mise en place de la page Discovery ===========*/
+function sendDiscovery(Discovery) {
+    document.getElementById(Discovery).innerHTML = "";
+    var myRequestDiscovery = new XMLHttpRequest();
+    myRequestDiscovery.open('GET', 'html/Pays.html');
+    myRequestDiscovery.onreadystatechange = function () {
+        if (myRequestDiscovery.readyState === 4) {
+            document.getElementById('Discovery').innerHTML = myRequestDiscovery.responseText;
+        }
+    };
+    myRequestDiscovery.send();
+    
+}
+sendDiscovery(Discovery);
+
 //==========Création générale de l'espace Pays===========
 //===============Création du menu central=============
 function initPaysCarte () {
@@ -60,7 +77,7 @@ function initPaysCarte () {
             }
         }
         menuList += '</div>';
-        document.getElementById('container-pays').innerHTML = menuList;
+        document.querySelector("#Discovery div.nos-pays div.container-pays").innerHTML = menuList;
     };
     myRequestMenu.send();
 }
@@ -92,10 +109,11 @@ function initPaysListe () {
             }
         }
         menuList += '</div>';
-        document.getElementById('container-pays').innerHTML = menuList;
+        document.querySelector("#Discovery div.nos-pays div.container-pays").innerHTML = menuList;
     };
     myRequestMenu.send();
 }
+
 
 //==========Mise en place de la page Commentaires===========*/
 function sendCommentaires(Testimonials) {
@@ -111,6 +129,21 @@ function sendCommentaires(Testimonials) {
 }
 
 sendCommentaires(Testimonials);
+
+//==========Mise en place de la page Produit ===========*/
+function sendProduit(Produit) {
+    document.getElementById(Produit).innerHTML = "";
+    var myRequestProduit = new XMLHttpRequest();
+    myRequestProduit.open('GET', 'html/Proposal.html');
+    myRequestProduit.onreadystatechange = function () {
+        if (myRequestProduit.readyState === 4) {
+            document.getElementById(Produit).innerHTML = myRequestProduit.responseText;
+        }
+    };
+    myRequestProduit.send();
+    
+}
+sendProduit(Produit);
 
 //===============Création du menu produit====================
 function initMenuProduit () {
@@ -133,7 +166,7 @@ function initMenuProduit () {
             }
         }
         produitList += '</div>';
-        document.getElementById('container-produit').innerHTML = produitList;
+        document.querySelector("#Proposals div.nos-produits div.container-produit").innerHTML = produitList;
     };
     myRequestProduit.send();
 }

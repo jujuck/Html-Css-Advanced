@@ -97,7 +97,7 @@ $(document).ready(function() {
         $("section").each(function() {
             'use strict';
             
-            var bb = $(this).attr("id"); // Anout, Download, ...
+            var bb = $(this).attr("id"); // About, Download, ...
             var hght = $(this).outerHeight();
             var greatTop = $(this).offset().top - 50;
             
