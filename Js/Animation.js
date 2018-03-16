@@ -117,7 +117,7 @@ $(document).ready(function() {
     setInterval(function() {
         'use strict';
         
-        var windowHeight = $(window).height();
+        var blocPaysHeight = $(window).width();
         var containerHeight = $(".header-container").height();
         var padTop = windowHeight - containerHeight;
         

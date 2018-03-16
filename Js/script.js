@@ -1,3 +1,42 @@
+var A = 'A';
+var B = 'B';
+var C = 'C';
+var D = 'D';
+var Home = A;
+var Spirit = B;
+var Testimonials = C;
+var Compteur = D;
+
+//==========Mise en place de la page Header===========*/
+function sendHeader(Home) {
+    document.getElementById(Home).innerHTML = "";
+    var myRequestHeader = new XMLHttpRequest();
+    myRequestHeader.open('GET', 'html/Header.html');
+    myRequestHeader.onreadystatechange = function () {
+        if (myRequestHeader.readyState === 4) {
+            document.getElementById(Home).innerHTML = myRequestHeader.responseText;
+        }
+    };
+    myRequestHeader.send();
+}
+
+sendHeader(Home);
+
+//==========Mise en place de la page Our Spirit===========*/
+function sendOurSpirit(Spirit) {
+    document.getElementById(Spirit).innerHTML = "";
+    var myRequestSpirit = new XMLHttpRequest();
+    myRequestSpirit.open('GET', 'html/Spirit.html');
+    myRequestSpirit.onreadystatechange = function () {
+        if (myRequestSpirit.readyState === 4) {
+            document.getElementById(Spirit).innerHTML = myRequestSpirit.responseText;
+        }
+    };
+    myRequestSpirit.send();
+}
+
+sendOurSpirit(Spirit);
+
 //==========Création générale de l'espace Pays===========
 //===============Création du menu central=============
 function initPaysCarte () {
@@ -26,7 +65,7 @@ function initPaysCarte () {
     myRequestMenu.send();
 }
 
-//initPaysCarte();
+initPaysCarte();
 
 //=============Création du menu central=====================
 function initPaysListe () {
@@ -58,9 +97,22 @@ function initPaysListe () {
     myRequestMenu.send();
 }
 
-initPaysListe();
+//==========Mise en place de la page Commentaires===========*/
+function sendCommentaires(Testimonials) {
+    document.getElementById(Testimonials).innerHTML = "";
+    var myRequestComments = new XMLHttpRequest();
+    myRequestComments.open('GET', 'html/Commentaires.html');
+    myRequestComments.onreadystatechange = function () {
+        if (myRequestComments.readyState === 4) {
+            document.getElementById(Testimonials).innerHTML = myRequestComments.responseText;
+        }
+    };
+    myRequestComments.send();
+}
 
-//Création du menu produit
+sendCommentaires(Testimonials);
+
+//===============Création du menu produit====================
 function initMenuProduit () {
     var myRequestProduit = new XMLHttpRequest();
     myRequestProduit.open('GET','Data/container-produit.json');
@@ -87,3 +139,128 @@ function initMenuProduit () {
 }
 
 initMenuProduit();
+
+//==========Mise en place de la page Compteur===========*/
+function sendCompteur(Compteur) {
+    document.getElementById(Compteur).innerHTML = "";
+    var myRequestCompteur = new XMLHttpRequest();
+    myRequestCompteur.open('GET', 'html/Compteur.html');
+    myRequestCompteur.onreadystatechange = function () {
+        if (myRequestCompteur.readyState === 4) {
+            document.getElementById(Compteur).innerHTML = myRequestCompteur.responseText;
+        }
+    };
+    myRequestCompteur.send();
+}
+
+sendCompteur(Compteur);
+
+//==========Mise en place de la page Formulaire===========*/
+/*function sendFormulaire() {
+    var myRequestFormulaire = new XMLHttpRequest();
+    myRequestFormulaire.open('GET', 'html/Formulaire.html');
+    myRequestFormulaire.onreadystatechange = function () {
+        if (myRequestFormulaire.readyState === 4) {
+            document.getElementById('Contact').innerHTML = myRequestFormulaire.responseText;
+        }
+    };
+    myRequestFormulaire.send();
+}
+
+sendFormulaire();*/
+
+//===============Vérification du formulairere et reconfiguration de la page========
+//============= Reconfiguration des elements====================
+function initNewConfig(configNum) {
+    switch(configNum) {
+    case "1":
+        Home = A;
+        Spirit = B;
+        Testimonials = C;
+        Compteur = D;
+        break;
+    case "2":
+        Home = B;
+        Spirit = C;
+        Testimonials = D;
+        Compteur = A;
+        break;
+    case "3":
+        Home = C;
+        Spirit = D;
+        Testimonials = A;
+        Compteur = B;
+        break;
+    case "4":
+        Home = D;
+        Spirit = A;
+        Testimonials = B;
+        Compteur = C;
+        break;
+    default:
+         alert("Ce numero ne convient à aucune configuration");
+    } 
+    sendHeader(Home);
+    sendOurSpirit(Spirit);
+    sendCompteur(Compteur);
+    sendCommentaires(Testimonials);
+}
+
+
+//validate password 
+document.getElementById("password").addEventListener("input", function (e) {
+	var password = e.target.value;
+	var passwordLength = "weak";
+	var messageColor = "black";
+	var passwordRegexLetter = /[A-Z]/;
+	var passwordRegexNumber = /[1-9]/;
+	var strength = 0;
+	var Letter = "Capital letter: checked";
+	var Nombre = "Number: checked";
+
+	//Calcul de la force du mot de passe
+	if (passwordRegexLetter.test(e.target.value) === true) {
+		strength += 2;
+	} else {
+		var Letter = "Must have at least one capital Letter";
+	};
+
+	if (passwordRegexNumber.test(e.target.value) === true) {
+		strength += 2;
+	} else {
+		var Nombre = "must have at least one number";
+	};
+
+	strength += password.length;
+
+	//Affichage des différents cas
+	if (strength > 12) {
+		passwordLength = "Very Strong";
+		messageColor = "green";
+	} else if (strength >= 10)  {
+		passwordLength = "Strong";
+		messageColor = "yellow";
+	} else if (strength >= 8) {
+		passwordLength = "Medium";
+		messageColor = " orange";
+	} else if (strength >= 6) {
+		passwordLength = "Poor";
+		messageColor = "red";
+	}
+
+	var passwordHelpElement = document.getElementById("passwordHelp");
+	passwordHelpElement.textContent = "Strength: " + passwordLength + ", " + Letter + ", " + Nombre;
+	passwordHelpElement.style.color = messageColor;
+});
+
+function verificationFormulaire() {
+    var utilisateur = document.getElementById("username").value;
+    var motDePasse = document.getElementById("password").value;
+
+    if (utilisateur === "julien" && motDePasse === "motdepasse") {
+        var configNum = prompt('Bonjour, veuillez entrez un N° de configuration 1-4');
+        initNewConfig(configNum);  
+    } else {
+        alert("Tu peux toujours courir!");
+    }
+}
