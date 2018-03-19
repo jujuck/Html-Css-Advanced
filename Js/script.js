@@ -58,6 +58,54 @@ function sendDiscovery(Discovery) {
 }
 sendDiscovery(Discovery);
 
+
+
+//==========Mise en place de la page Commentaires===========*/
+function sendCommentaires(Testimonials) {
+    document.getElementById(Testimonials).innerHTML = "";
+    var myRequestComments = new XMLHttpRequest();
+    myRequestComments.open('GET', 'Html/Commentaires.html');
+    myRequestComments.onreadystatechange = function () {
+        if (myRequestComments.readyState === 4) {
+            document.getElementById(Testimonials).innerHTML = myRequestComments.responseText;
+        }
+    };
+    myRequestComments.send();
+}
+
+sendCommentaires(Testimonials);
+
+//==========Mise en place de la page Produit ===========*/
+function sendProduit(Produit) {
+    document.getElementById(Produit).innerHTML = "";
+    var myRequestProduit = new XMLHttpRequest();
+    myRequestProduit.open('GET', 'Html/Proposal.html');
+    myRequestProduit.onreadystatechange = function () {
+        if (myRequestProduit.readyState === 4) {
+            document.getElementById(Produit).innerHTML = myRequestProduit.responseText;
+        }
+    };
+    myRequestProduit.send();
+    
+}
+sendProduit(Produit);
+
+
+//==========Mise en place de la page Compteur===========*/
+function sendCompteur(Compteur) {
+    document.getElementById(Compteur).innerHTML = "";
+    var myRequestCompteur = new XMLHttpRequest();
+    myRequestCompteur.open('GET', 'Html/Compteur.html');
+    myRequestCompteur.onreadystatechange = function () {
+        if (myRequestCompteur.readyState === 4) {
+            document.getElementById(Compteur).innerHTML = myRequestCompteur.responseText;
+        }
+    };
+    myRequestCompteur.send();
+}
+
+sendCompteur(Compteur);
+
 //==========Création générale de l'espace Pays===========
 //===============Création du menu central=============
 function initPaysCarte () {
@@ -118,37 +166,6 @@ function initPaysListe () {
     myRequestMenu.send();
 }
 
-
-//==========Mise en place de la page Commentaires===========*/
-function sendCommentaires(Testimonials) {
-    document.getElementById(Testimonials).innerHTML = "";
-    var myRequestComments = new XMLHttpRequest();
-    myRequestComments.open('GET', 'Html/Commentaires.html');
-    myRequestComments.onreadystatechange = function () {
-        if (myRequestComments.readyState === 4) {
-            document.getElementById(Testimonials).innerHTML = myRequestComments.responseText;
-        }
-    };
-    myRequestComments.send();
-}
-
-sendCommentaires(Testimonials);
-
-//==========Mise en place de la page Produit ===========*/
-function sendProduit(Produit) {
-    document.getElementById(Produit).innerHTML = "";
-    var myRequestProduit = new XMLHttpRequest();
-    myRequestProduit.open('GET', 'Html/Proposal.html');
-    myRequestProduit.onreadystatechange = function () {
-        if (myRequestProduit.readyState === 4) {
-            document.getElementById(Produit).innerHTML = myRequestProduit.responseText;
-        }
-    };
-    myRequestProduit.send();
-    
-}
-sendProduit(Produit);
-
 //===============Création du menu produit====================
 function initMenuProduit() {
     var myRequestProduit = new XMLHttpRequest();
@@ -176,21 +193,6 @@ function initMenuProduit() {
 }
 
 initMenuProduit();
-
-//==========Mise en place de la page Compteur===========*/
-function sendCompteur(Compteur) {
-    document.getElementById(Compteur).innerHTML = "";
-    var myRequestCompteur = new XMLHttpRequest();
-    myRequestCompteur.open('GET', 'Html/Compteur.html');
-    myRequestCompteur.onreadystatechange = function () {
-        if (myRequestCompteur.readyState === 4) {
-            document.getElementById(Compteur).innerHTML = myRequestCompteur.responseText;
-        }
-    };
-    myRequestCompteur.send();
-}
-
-sendCompteur(Compteur);
 
 //===============Vérification du formulairere et reconfiguration de la page========
 //============= Reconfiguration des elements====================
