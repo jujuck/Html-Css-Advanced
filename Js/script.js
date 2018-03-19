@@ -62,7 +62,7 @@ sendDiscovery(Discovery);
 //===============Création du menu central=============
 function initPaysCarte () {
     var myRequestMenu = new XMLHttpRequest();
-    myRequestMenu.open('GET','Data/container-bloc.json');
+    myRequestMenu.open('GET','data/container-bloc.json');
 
     myRequestMenu.onreadystatechange = function () {
         if(myRequestMenu.readyState === 4) {
@@ -91,7 +91,7 @@ initPaysCarte();
 //=============Création du menu central=====================
 function initPaysListe () {
     var myRequestMenu = new XMLHttpRequest();
-    myRequestMenu.open('GET','Data/container-bloc.json');
+    myRequestMenu.open('GET','data/container-bloc.json');
 
     myRequestMenu.onreadystatechange = function () {
         if(myRequestMenu.readyState === 4) {
@@ -152,7 +152,7 @@ sendProduit(Produit);
 //===============Création du menu produit====================
 function initMenuProduit() {
     var myRequestProduit = new XMLHttpRequest();
-    myRequestProduit.open('GET','Data/container-produit.json');
+    myRequestProduit.open('GET','data/container-produit.json');
 
     myRequestProduit.onreadystatechange = function () {
         if(myRequestProduit.readyState === 4) {
