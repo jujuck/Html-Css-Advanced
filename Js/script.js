@@ -17,7 +17,7 @@ var Formulaire = G;
 function sendHeader(Home) {
     document.getElementById(Home).innerHTML = "";
     var myRequestHeader = new XMLHttpRequest();
-    myRequestHeader.open('GET', 'html/Header.html');
+    myRequestHeader.open('GET', 'Html/Header.html');
     myRequestHeader.onreadystatechange = function () {
         if (myRequestHeader.readyState === 4) {
             document.getElementById(Home).innerHTML = myRequestHeader.responseText;
@@ -32,7 +32,7 @@ sendHeader(Home);
 function sendOurSpirit(Spirit) {
     document.getElementById(Spirit).innerHTML = "";
     var myRequestSpirit = new XMLHttpRequest();
-    myRequestSpirit.open('GET', 'html/Spirit.html');
+    myRequestSpirit.open('GET', 'Html/Spirit.html');
     myRequestSpirit.onreadystatechange = function () {
         if (myRequestSpirit.readyState === 4) {
             document.getElementById(Spirit).innerHTML = myRequestSpirit.responseText;
@@ -47,7 +47,7 @@ sendOurSpirit(Spirit);
 function sendDiscovery(Discovery) {
     document.getElementById(Discovery).innerHTML = "";
     var myRequestDiscovery = new XMLHttpRequest();
-    myRequestDiscovery.open('GET', 'html/Pays.html');
+    myRequestDiscovery.open('GET', 'Html/Pays.html');
     myRequestDiscovery.onreadystatechange = function () {
         if (myRequestDiscovery.readyState === 4) {
             document.getElementById(Discovery).innerHTML = myRequestDiscovery.responseText;
@@ -62,7 +62,7 @@ sendDiscovery(Discovery);
 //===============Création du menu central=============
 function initPaysCarte () {
     var myRequestMenu = new XMLHttpRequest();
-    myRequestMenu.open('GET','data/container-bloc.json');
+    myRequestMenu.open('GET','Data/container-bloc.json');
 
     myRequestMenu.onreadystatechange = function () {
         if(myRequestMenu.readyState === 4) {
@@ -91,7 +91,7 @@ initPaysCarte();
 //=============Création du menu central=====================
 function initPaysListe () {
     var myRequestMenu = new XMLHttpRequest();
-    myRequestMenu.open('GET','data/container-bloc.json');
+    myRequestMenu.open('GET','Data/container-bloc.json');
 
     myRequestMenu.onreadystatechange = function () {
         if(myRequestMenu.readyState === 4) {
@@ -123,7 +123,7 @@ function initPaysListe () {
 function sendCommentaires(Testimonials) {
     document.getElementById(Testimonials).innerHTML = "";
     var myRequestComments = new XMLHttpRequest();
-    myRequestComments.open('GET', 'html/Commentaires.html');
+    myRequestComments.open('GET', 'Html/Commentaires.html');
     myRequestComments.onreadystatechange = function () {
         if (myRequestComments.readyState === 4) {
             document.getElementById(Testimonials).innerHTML = myRequestComments.responseText;
@@ -138,7 +138,7 @@ sendCommentaires(Testimonials);
 function sendProduit(Produit) {
     document.getElementById(Produit).innerHTML = "";
     var myRequestProduit = new XMLHttpRequest();
-    myRequestProduit.open('GET', 'html/Proposal.html');
+    myRequestProduit.open('GET', 'Html/Proposal.html');
     myRequestProduit.onreadystatechange = function () {
         if (myRequestProduit.readyState === 4) {
             document.getElementById(Produit).innerHTML = myRequestProduit.responseText;
@@ -152,7 +152,7 @@ sendProduit(Produit);
 //===============Création du menu produit====================
 function initMenuProduit() {
     var myRequestProduit = new XMLHttpRequest();
-    myRequestProduit.open('GET','data/container-produit.json');
+    myRequestProduit.open('GET','Data/container-produit.json');
 
     myRequestProduit.onreadystatechange = function () {
         if(myRequestProduit.readyState === 4) {
@@ -181,7 +181,7 @@ initMenuProduit();
 function sendCompteur(Compteur) {
     document.getElementById(Compteur).innerHTML = "";
     var myRequestCompteur = new XMLHttpRequest();
-    myRequestCompteur.open('GET', 'html/Compteur.html');
+    myRequestCompteur.open('GET', 'Html/Compteur.html');
     myRequestCompteur.onreadystatechange = function () {
         if (myRequestCompteur.readyState === 4) {
             document.getElementById(Compteur).innerHTML = myRequestCompteur.responseText;
