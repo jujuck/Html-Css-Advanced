@@ -1,5 +1,5 @@
 //validate password 
-document.getElementById("password").addEventListener("input", function (e) {
+document.getElementById("password")).addEventListener("input", function (e) {
     console.log("j'y suis");
 	var password = e.target.value;
 	var passwordLength = "weak";

@@ -4,12 +4,14 @@ var C = 'Testimonials';
 var D = 'Compteur';
 var E = 'Discovery';
 var F = 'Proposals';
+var G = 'Formulaire'
 var Home = A;
 var Spirit = B;
 var Testimonials = C;
 var Compteur = D;
 var Discovery = E;
 var Produit = F;
+var Formulaire = G;
 
 //==========Mise en place de la page Header===========*/
 function sendHeader(Home) {
@@ -190,20 +192,6 @@ function sendCompteur(Compteur) {
 
 sendCompteur(Compteur);
 
-//==========Mise en place de la page Formulaire===========*/
-/*function sendFormulaire() {
-    var myRequestFormulaire = new XMLHttpRequest();
-    myRequestFormulaire.open('GET', 'html/Formulaire.html');
-    myRequestFormulaire.onreadystatechange = function () {
-        if (myRequestFormulaire.readyState === 4) {
-            document.getElementById('Contact').innerHTML = myRequestFormulaire.responseText;
-        }
-    };
-    myRequestFormulaire.send();
-}
-
-sendFormulaire();*/
-
 //===============Vérification du formulairere et reconfiguration de la page========
 //============= Reconfiguration des elements====================
 function initNewConfig(configNum) {
@@ -226,10 +214,10 @@ function initNewConfig(configNum) {
         break;
     case "3":
         Home = C;
-        Spirit = F;
+        Spirit = A;
         Testimonials = E;
         Compteur = B;
-        Discovery = A;
+        Discovery = F;
         Produit = D;
         break;
     case "4":
@@ -244,9 +232,9 @@ function initNewConfig(configNum) {
         Home = B;
         Spirit = F;
         Testimonials = E;
-        Compteur = C;
+        Compteur = A;
         Discovery = D;
-        Produit = A;
+        Produit = C;
         break;
     case "6":
         Home = C;
@@ -326,4 +314,34 @@ function verificationFormulaire() {
     } else {
         alert("Tu peux toujours courir!");
     }
+}
+
+/*============== Reconfig automatique ============*/
+var auto = 0;
+var intervalId = "";
+//diminue le compteur jusq'à 0
+function repositionnementAuto() {
+    if (auto < 1) {
+        configNum = ((Math.floor(Math.random() * 5)) +1).toString();
+         console.log(configNum);
+        initNewConfig(configNum);
+    } else {
+        clearInterval(intervalId);
+    }
+}
+
+
+
+function reconfigAutomatique() {
+    document.getElementById("Automatique").style.display = "none";
+    document.getElementById("arretScript").style.display = "inline";
+    auto = 0;
+   
+    intervalId = setInterval(repositionnementAuto, 5000);
+}
+
+function arretScript() {
+     document.getElementById("Automatique").style.display = "inline";
+    document.getElementById("arretScript").style.display = "none";
+    auto = 1;
 }

@@ -149,7 +149,7 @@ p {
 }
 
 .header-btn {
-    margin-top: 300px;
+    margin-top: 75px;
     text-align: center;
 }
 
@@ -644,5 +644,12 @@ background-color: #F3461A;
     font-size: 25px;
 }
 
+.footer-btn {
+    margin-bottom: 50px;
+    text-align: center;
+}
 
-
+#arretScript {
+    display : none;
+    margin-bottom : 50px;
+}

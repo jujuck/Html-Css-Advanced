@@ -32,10 +32,8 @@
         <section id="Spirit">   
         </section>
         
-        
         <!-- Nos Pays -->
-        <section id="Discovery">
-            
+        <section id="Discovery">  
         </section>
         
         <!-- Commentaires -->
@@ -44,7 +42,6 @@
         
         <!--Espace de menu produit-->
         <Section id="Proposals">
-            
         </Section>
         
         <!-- Counter section -->
@@ -52,8 +49,8 @@
         </section>
         
         <!-- Formulaire de contact -->
-        <section class="formulaire-contact" id="Formulaires">
-            <div class="container">
+        <section id="Formulaire">
+           <div class="container formulaire-contact">
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="titre-description">
@@ -62,78 +59,78 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="contact-us-form">
-                <div class="container">
-                    <form role="form">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <h3>Signup form</h3>
-                                <p>
-                                    <label for="username">Username</label> :
-                                    <input type="text" name="username" placeholder="Nom" id="username" required>
-                                    <span id="usernameHelp"></span>
-                                </p>
-                                <p>
-                                    <label for="password">Password</label> :
-                                    <input type="password" name="password" id="password" required>
-                                    <span id="passwordHelp"></span>
-                                </p>
-                                <p>
-                                    <label for="emailAddress">Email address</label> :
-                                    <input type="email" name="emailAddress" id="emailAddress" required placeholder="user@gmail.com">
-                                    <span id="emailHelp"></span>
-                                </p>
-                                <p>
-                                    <input type="checkbox" name="confirmation" id="confirmation">
-                                    <label for="confirmation">Send me a confirmation email</label>
-                                </p>
-                                <p>
-                                    <input type="radio" name="subscription" id="newsroom" value="newspromo">
-                                    <label for="newsroom">Subscribe me to newsletters and promotions</label>
-                                    <br>
-                                    <input type="radio" name="subscription" id="news" value="news">
-                                    <label for="news">Subscribe me only to the newsletter</label>
-                                    <br>
-                                    <input type="radio" name="subscription" id="no" value="no" checked>
-                                    <label for="no">No subscriptions please</label>
-                                    <br>
-                                </p>
-                                <p>
-                                    <label for="nationality">Nationality :</label>
-                                    <select name="nationality" id="nationality">
-                                        <option value="US" selected>American</option>
-                                        <option value="FR">French</option>
-                                        <option value="ES">Spanish</option>
-                                        <option value="CH">Chinese</option>
-                                        <option value="GER">German</option>
-                                        <option value="EN">English</option>
-                                        <option value="Ho">Dutch</option>
-                                        <option value="P">Portugese</option>
-                                        <option value="OZ">Australian</option>
-                                        <option value="XX">Other</option>
-                                    </select>
-                                </p>
+                <div class="contact-us-form">
+                    <div class="container">
+                        <form role="form">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h3>Signup form</h3>
+                                    <p>
+                                        <label for="username">Username</label> :
+                                        <input type="text" name="username" placeholder="Nom" id="username" required>
+                                        <span id="usernameHelp"></span>
+                                    </p>
+                                    <p class="password">
+                                        <label for="password">Password</label> :
+                                        <input class="password" type="password" name="password" id="password" required>
+                                        <span id="passwordHelp"></span>
+                                    </p>
+                                    <p>
+                                        <label for="emailAddress">Email address</label> :
+                                        <input type="email" name="emailAddress" id="emailAddress" required placeholder="user@gmail.com">
+                                        <span id="emailHelp"></span>
+                                    </p>
+                                    <p>
+                                        <input type="checkbox" name="confirmation" id="confirmation">
+                                        <label for="confirmation">Send me a confirmation email</label>
+                                    </p>
+                                    <p>
+                                        <input type="radio" name="subscription" id="newsroom" value="newspromo">
+                                        <label for="newsroom">Subscribe me to newsletters and promotions</label>
+                                        <br>
+                                        <input type="radio" name="subscription" id="news" value="news">
+                                        <label for="news">Subscribe me only to the newsletter</label>
+                                        <br>
+                                        <input type="radio" name="subscription" id="no" value="no" checked>
+                                        <label for="no">No subscriptions please</label>
+                                        <br>
+                                    </p>
+                                    <p>
+                                        <label for="nationality">Nationality :</label>
+                                        <select name="nationality" id="nationality">
+                                            <option value="US" selected>American</option>
+                                            <option value="FR">French</option>
+                                            <option value="ES">Spanish</option>
+                                            <option value="CH">Chinese</option>
+                                            <option value="GER">German</option>
+                                            <option value="EN">English</option>
+                                            <option value="Ho">Dutch</option>
+                                            <option value="P">Portugese</option>
+                                            <option value="OZ">Australian</option>
+                                            <option value="XX">Other</option>
+                                        </select>
+                                    </p>
+                                </div>
+                                <div class="col-md-8">
+                                    <h3>Signup form</h3>
+                                    <textarea class="form-control" id="message" rows="25" cols="10" placeholder="Message text...."></textarea>
+                                    <button type="button" class="btn btn-pays  form_submit" onclick="verificationFormulaire()">SEND</button>
+                                </div>
                             </div>
-                            <div class="col-md-8">
-                                <h3>Signup form</h3>
-                                <textarea class="form-control" id="message" rows="25" cols="10" placeholder="Message text...."></textarea>
-                                <button type="button" class="btn btn-pays  form_submit" onclick="verificationFormulaire()">SEND</button>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
-            </div>
-             <div class="container">
-                <div class="row">
-                    <div class="col-md-12 wow flip" data_wow-duration:"1s">
-                        <div class="social-icons">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-                                <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                                <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                                <li><a href=""><i class="fa fa-github"></i></a></li>
-                            </ul>
+                 <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 wow flip" data_wow-duration:"1s">
+                            <div class="social-icons">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                    <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href=""><i class="fa fa-github"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -153,6 +150,17 @@
                         <div class="scroll-top" >
                             <a href="#Home" id="scroll-to-top"><i class="fa fa-angle-up"></i></a>
                         </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="clo-md-12">
+                        <div class="footer-btn">
+                            <div class="footer-btn">
+                            <button class="btn btn-pays" onclick="arretScript()" id="arretScript">Je vous avais prévenu</button>
+                            </div>
+                            <button class="btn btn-pays" onclick="reconfigAutomatique()" id="Automatique">Merci de ne pas cliquer !!! :-)</button>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
