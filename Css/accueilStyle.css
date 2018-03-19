@@ -111,7 +111,7 @@ p {
 .header {
     height: 700px;
     background-repeat: no-repeat;
-    background-image: url("../Images/Jumbo/Australie-Jumbo.jpg");
+    background-image: url("../Images/Jumbo/Australie-header.jpg");
     background-position: 50% 50%;
     background-size: cover;
     background-attachment: fixed;
